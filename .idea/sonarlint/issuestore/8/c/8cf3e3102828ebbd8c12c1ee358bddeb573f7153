@@ -1,0 +1,9 @@
+
+Isquid:S1168,"+Return an empty collection instead of null.(¥¹ï8Ö°¹.
+Nsquid:S1172#"0Remove this unused method parameter "firstName".(ıß—8©˜».
+Gsquid:S1172")Remove this unused method parameter "id".(´ûÍ8ç‹ú.
+Usquid:S1135"2Complete the task associated to this TODO comment.(Ì…Æ›ıÿÿÿÿ8Õ¤‹š.
+Usquid:S1135'"2Complete the task associated to this TODO comment.(Ì…Æ›ıÿÿÿÿ8Ø¡µ.
+Isquid:S1168"+Return an empty collection instead of null.(¥¹ï8ë¤©¥.
+gsquid:S1192"IDefine a constant instead of duplicating this literal "Edeleanu" 4 times.(‚„ó±8Ø¡µ.
+¤squid:S1186/"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ÈÚŠ‘üÿÿÿÿ8Ú„§˜.

@@ -1,36 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c256cd13-2f7b-4f69-a80c-87ad585b353a" name="Default Changelist" comment="" />
+    <list default="true" id="c256cd13-2f7b-4f69-a80c-87ad585b353a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/repository/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/response/ResponseOfUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/finance/TestData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/finance/controller/FinanceControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/finance/repository/AccountRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/finance/repository/UserRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/finance/service/FinanceServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4fc858fdf2b2792f466d1140c376c95847e2456f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4fc858fdf2b2792f466d1140c376c95847e2456f" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/6203502c759745186da6e66efacf14087bee3da0" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/6203502c759745186da6e66efacf14087bee3da0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8cf3e3102828ebbd8c12c1ee358bddeb573f7153" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b9d87969e00a07eb16a04c5355f4474a5d898147" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b9d87969e00a07eb16a04c5355f4474a5d898147" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f4e95f30d707076310ae7646ebdbd641235d8974" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f4e95f30d707076310ae7646ebdbd641235d8974" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db-docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/db-docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/controller/FinanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/controller/FinanceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/model/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/model/AccountType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/model/AccountType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/repository/DatabaseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/service/FinanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/service/FinanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/finance/controller/FinanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/finance/controller/FinanceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/finance/model/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/finance/model/Account.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/finance/model/AccountType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/finance/model/AccountType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/finance/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/finance/model/User.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Finance" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1Ytr9LY3WCmcMjkzYbakD58dIC6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="ExtractSuperBase.RECENT_KEYS">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.project.finance.service" />
       <recent name="com.project.finance.repository" />
+      <recent name="com.project.finance.controller" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
+    <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="com.project.finance.repository" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.project.finance.repository" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -77,5 +129,29 @@
       <updated>1583772578104</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/project/finance/service/FinanceService.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

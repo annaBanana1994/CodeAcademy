@@ -1,84 +1,166 @@
 package com.project.finance.service;
 
-import com.project.finance.repository.DatabaseService;
+import com.fasterxml.jackson.databind.exc.InvalidDefinitionException;
+import com.project.finance.model.AccountType;
+import com.project.finance.repository.AccountRepository;
 import com.project.finance.model.Account;
 import com.project.finance.model.User;
-import com.project.finance.utilities.NoRecordsExist;
+import com.project.finance.repository.UserRepository;
+import com.project.finance.response.ResponseOfUser;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 @Service
 public class FinanceService {
 
     @Autowired
-    DatabaseService databaseService;
+    UserRepository userRepository;
 
-    public List<User> getAllUsers() {
-        //TODO catch null
-        return databaseService.getAllUsersInDB();
-    }
+    @Autowired
+    AccountRepository accountRepository;
 
-    public User getUsersInformationById(int id){
-        //TODO need to decide how to display error message in browser
-        try {
-            User user = databaseService.searchForUserByPK(id);
-            return user;
-        }catch (NoRecordsExist ex){
-            return null;
-        }
+
+    public List<?> getAllUsers() {
+        return iterableToList(userRepository.findAll());
     }
 
     public List<User> getUsersInformationByFirstName(String firstName){
-        //TODO need to decide how to display error message in browser
-        try {
-            List<User> users = databaseService.searchForUserByFirstName(firstName);
-            return users;
-        }catch (RuntimeException ex){
-            return null;
-        }
+            return (userRepository.findByFirstName(firstName));
     }
 
-    public String searchUsersAccountsForSpecific(int id, String accountType){
+    public ResponseOfUser getUsersInformationById(int id){
+        User user = userRepository.findById(id);
+        if(user==null){
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "User Not Found");
+        }
+        List<Account> accounts= accountRepository.findByUser(user);
+        ResponseOfUser responseOfUser = new ResponseOfUser(user, accounts);
+        return responseOfUser;
+    }
 
-        //TODO catch null user
+    public ResponseOfUser searchUsersAccountsForSpecific(int id, String accountType){
+        User user = userRepository.findById(id);
+        List<Account> accountsOfSpecifiedType =accountRepository.findByUserAndAccountType(user, accountStringEnumToString(accountType));
+        ResponseOfUser responseOfUser = new ResponseOfUser(user, accountsOfSpecifiedType);
+        return  responseOfUser;
+    }
+
+    public ResponseOfUser addNewUser(String name) {
+        int numberOfNames= name.lastIndexOf(' ');
+        if (numberOfNames==-1){
+            throw new ResponseStatusException((HttpStatus.BAD_REQUEST));
+        }
+
+        User newUser = new User(name.substring(0,numberOfNames), name.substring(numberOfNames+1));
+        return getUsersInformationById(userRepository.save(newUser).getId());
+    }
+
+    public ResponseOfUser addNewAccount(int id, String accountInformation) {
+        String lines[] = accountInformation.split("\\r?\\n");
+        User user = userRepository.findById(id);
+        if(user==null){
+            throw new ResponseStatusException(
+                    HttpStatus.NOT_FOUND, "User Not Found");
+        }
+        Account newAccount = new Account(lines[0], accountToEnum(lines[1]), user);
+        accountRepository.save(newAccount);
+        return getUsersInformationById(user.getId());
+    }
+
+    public ResponseOfUser updateUser(int id, String name) {
+        int numberOfNames= name.lastIndexOf(' ');
+        if (numberOfNames==-1){
+            throw new ResponseStatusException((HttpStatus.BAD_REQUEST));
+        }
+        User existingUser = userRepository.findById(id);
+        existingUser.setFirstName(name.substring(0,numberOfNames));
+        existingUser.setLastName(name.substring(numberOfNames+1));
+        userRepository.save(existingUser);
+        return getUsersInformationById(existingUser.getId());
+    }
+
+    public void updateAccountName(int id, String name) {
+        Account existingAccount = accountRepository.findById(id);
+        existingAccount.setAccountName(name);
+        System.out.println(existingAccount);
+        accountRepository.save(existingAccount);
+        User user= userRepository.findById(existingAccount.getUser().getId());
+        int iduser = user.getId();
+        ResponseOfUser response = getUsersInformationById(iduser);
+      //  return getUsersInformationById(iduser);
+    }
+
+    public Object deleteRecord(String type, String idString) throws InvalidDefinitionException {
         try {
-            User user = databaseService.searchForUserByPK(id);
-            List<Account> searchedForAccounts = new ArrayList<>();
-            for (Account account : user.getAccounts()) {
-                if (account.getAccountType().toString().equalsIgnoreCase(accountType)) {
-                    searchedForAccounts.add(account);
+            int id = Integer.parseInt(idString.trim());
+
+            if (type.equals("user")) {
+                User userToBeDeleted = userRepository.findById(id);
+                List<Account> accountsToBeDeleted = accountRepository.findByUser(userToBeDeleted);
+                for (Account account : accountsToBeDeleted) {
+                    accountRepository.delete(account);
                 }
+                userRepository.delete(userToBeDeleted);
+                return userToBeDeleted;
+            } else if (type.equals("account")) {
+                    Account accountToBeDeleted = accountRepository.findById(id);
+                    accountRepository.delete(accountToBeDeleted);
+                    return accountToBeDeleted;
             }
-            //ToDo error message if doesn't exist
-            if(searchedForAccounts.isEmpty()){
-                return userDoesNotHaveThatAccount(user);
-            }
-            return searchedForAccounts.toString();
-        }catch (RuntimeException ex){
-            return userDoesNotExist();
+        }
+        catch (NumberFormatException nfe)
+        {
+            System.out.println("NumberFormatException: " + nfe.getMessage());
+        }
+        return null;
+    }
+
+
+
+
+
+
+
+
+
+    public List<?> iterableToList(Iterable iterable){
+        List<Object> list = new ArrayList<>();
+        Iterator<?> iterator= iterable.iterator();
+        while (iterator.hasNext()){
+            list.add(iterator.next());
+        }
+        return list;
+    }
+
+    public String accountStringEnumToString(String accountType){
+        if (accountType.equalsIgnoreCase(AccountType.CURRENT.toString())){
+            return AccountType.CURRENT.name();
+        } else if (accountType.equalsIgnoreCase(AccountType.SAVINGS.toString())) {
+            return AccountType.SAVINGS.name();
+        } else if (accountType.equalsIgnoreCase(AccountType.CHECKING.toString())) {
+            return AccountType.CHECKING.name();
+        }else {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
     }
 
-    private String userDoesNotHaveThatAccount(User user) {
-        return user.getFirstName()+' '+user.getLastName()+" does not have any accounts of that type";
+    private AccountType accountToEnum(String accountType) {
+        if (accountType.equalsIgnoreCase(AccountType.CURRENT.toString())) {
+            return AccountType.CURRENT;
+        } else if (accountType.equalsIgnoreCase(AccountType.SAVINGS.toString())) {
+            return AccountType.SAVINGS;
+        } else if (accountType.equalsIgnoreCase(AccountType.CHECKING.toString())) {
+            return AccountType.CHECKING;
+        } else {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
+        }
     }
-
-    public String addNewUser(User user) {
-        databaseService.addNewUser(user);
-        return  "New user added: "+user.toString();
-
-    }
-
-
-    //TODO Should create an error message instead
-    public String userDoesNotExist(){
-        return "User is not in our records";
-    }
-    //add account?
-    //add user
 
 }
-

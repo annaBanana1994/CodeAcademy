@@ -1,10 +1,10 @@
 
-Psquid:S1135"2Complete the task associated to this TODO comment.(«ÅùŠ8ÎÈÛŸ.
 nsquid:CommentedOutCodeLine4"<This block of commented-out lines of code should be removed.(ô–œŒûÿÿÿÿ8å¯¸ÔŒ.
-Psquid:S1135"2Complete the task associated to this TODO comment.(£Ç¿8øÇÅ.
-wsquid:UselessImportCheck"LRemove this unused import 'com.project.finance.utilities.NullStatusMessage'.(œİ¾Î8íÅñŸ.
-isquid:CommentedOutCodeLine""<This block of commented-out lines of code should be removed.(›Àé8Õ™ğŸ.
-nsquid:CommentedOutCodeLine="<This block of commented-out lines of code should be removed.(Ó÷Õ±ùÿÿÿÿ8÷¬ôŸ.
-^squid:S46847"@Replace this persistent entity with a simple POJO or DTO object.(ÌÃ¨Ú8ÜÛìŒ.
-isquid:CommentedOutCodeLine?"<This block of commented-out lines of code should be removed.(„§ñ£8÷¬ôŸ.
 Dsquid:S1452"&Remove usage of generic wildcard type.(êİ¥ä8íÅñŸ.
+Psquid:S1135"2Complete the task associated to this TODO comment.(£Ç¿8øÇÅ.
+nsquid:CommentedOutCodeLine="<This block of commented-out lines of code should be removed.(Ó÷Õ±ùÿÿÿÿ8÷¬ôŸ.
+isquid:CommentedOutCodeLine""<This block of commented-out lines of code should be removed.(›Àé8Õ™ğŸ.
+isquid:CommentedOutCodeLine?"<This block of commented-out lines of code should be removed.(„§ñ£8÷¬ôŸ.
+Psquid:S1135"2Complete the task associated to this TODO comment.(«ÅùŠ8ÎÈÛŸ.
+^squid:S46847"@Replace this persistent entity with a simple POJO or DTO object.(ÌÃ¨Ú8ÜÛìŒ.
+wsquid:UselessImportCheck"LRemove this unused import 'com.project.finance.utilities.NullStatusMessage'.(œİ¾Î8íÅñŸ.

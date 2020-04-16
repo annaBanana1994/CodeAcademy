@@ -1,41 +1,35 @@
 package com.project.finance.model;
 
 import javax.persistence.*;
+import java.security.PublicKey;
 import java.util.List;
 
 @Entity
-@Table
-@SequenceGenerator(name="seq", initialValue=1, allocationSize=100)
+@Table(name = "Users")
+@SequenceGenerator(name="seqUser", initialValue=1, allocationSize=100)
 public class User {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq")
+    @GeneratedValue(strategy=GenerationType.AUTO, generator="seqUser")
+   // @OneToMany(mappedBy = "user")
+  //  @JoinColumn
     @Column
     private int id;
     @Column
     private String firstName;
     @Column
     private String lastName;
-    @Column
-    private List<Account> accounts;
 
-    public User(String firstName, String lastName, List<Account> accounts) {
+    public User (){}
+
+    public User(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.accounts = accounts;
     }
 
-    public void addAccount(Account newAccount){
-        accounts.add(newAccount);
-    }
 
     @Override
-    public String toString() {
-        return "User{" +
-                " Full Name='" + firstName + " " + lastName + '\''+
-                ", Accounts=" + accounts +
-                '}';
-    }
+    public String toString(){return "User ID: "+id+"   Name: "+firstName+' '+lastName+'\n';}
 
     public int getId() {
         return id;
@@ -59,14 +53,6 @@ public class User {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public List<Account> getAccounts() {
-        return accounts;
-    }
-
-    public void setAccounts(List<Account> accounts) {
-        this.accounts = accounts;
     }
 
 }

@@ -1,11 +1,11 @@
 package com.project.finance.controller;
 
-import com.project.finance.model.User;
+import com.fasterxml.jackson.databind.exc.InvalidDefinitionException;
+import com.project.finance.response.ResponseOfUser;
 import com.project.finance.service.FinanceService;
-import com.project.finance.utilities.NullStatusMessage;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -16,52 +16,55 @@ import java.util.List;
 @Controller
 public class FinanceController {
 
-    //TODO At interfaces to servicelayer and repository, add logger files
-
     @Autowired
     FinanceService financeService;
 
-    @GetMapping("/records")
-    public ResponseEntity<List<User>> searchAllRecords (){
+    @GetMapping("/users")
+    public ResponseEntity<List<?>> searchForAllUsers (){
         return new ResponseEntity<>(financeService.getAllUsers(), HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<?> searchForUserById(@PathVariable("id")int id){
-        //TODO We don't want this logic here, move to servic layer
-        User user = financeService.getUsersInformationById(id);
-        if (user==null){
-            //return new ResponseEntity<>(new CustomErrorMessage("No user with "+id+"  found in our records."),HttpStatus.NOT_FOUND);
-            return new ResponseEntity<>("No user with "+id+"  found in our records.",HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<>(user, HttpStatus.OK);
-    }
-
-    @GetMapping("/{userFirstName}")
-    public ResponseEntity<List<User>> searchforUserByFirstName (@PathVariable("userFirstName")String firstName){
+    @GetMapping("/search/{userFirstName}")
+    public ResponseEntity<List<?>> searchforUserByFirstName (@PathVariable("userFirstName")String firstName){
         return new ResponseEntity<>(financeService.getUsersInformationByFirstName(firstName), HttpStatus.OK);
     }
 
-    @GetMapping("/{id}/{accountType}")
-    public ResponseEntity<String> checkIfUserHasAccountType(@PathVariable("id")int id,
-                                                            @PathVariable("accountType")String accountType){
+    @GetMapping("/{id}")
+    public ResponseEntity<ResponseOfUser> searchForUserById(@PathVariable("id")int id){
+        return new ResponseEntity<>(financeService.getUsersInformationById(id), HttpStatus.OK);
+    }
 
+    @GetMapping("/{id}/{accountType}")
+    public ResponseEntity<ResponseOfUser> checkIfUserHasAccountType(@PathVariable("id")int id,
+                                                            @PathVariable("accountType") String accountType){
         return new ResponseEntity<>(financeService.searchUsersAccountsForSpecific(id, accountType), HttpStatus.OK);
     }
 
-    //{/new body will have the user information}
-
-    @PostMapping(value = "/new", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<String> addNewUserInformation(@RequestBody User user){
-        financeService.addNewUser(user);
-        return null;
+    @PostMapping(value = "/newUser")
+            //, consumes = "application/json", produces = "application/json")
+    public ResponseEntity<ResponseOfUser> addNewUser(@RequestBody String name){
+        return new ResponseEntity<>(financeService.addNewUser(name),HttpStatus.CREATED);
     }
 
-//    @DeleteMapping()
-//    public RequestEntity<String> deleteUser(@RequestBody String firstName){
-//
-//        return null;
-//    }
+    @PostMapping("/{id}/newAccount")
+    public ResponseEntity<ResponseOfUser> addNewAccount(@PathVariable("id")int id, @RequestBody String accountInformation){
+        return new ResponseEntity<>(financeService.addNewAccount(id, accountInformation), HttpStatus.CREATED);
+    }
 
+    @PutMapping("update/user/{id}")
+    public ResponseEntity<ResponseOfUser> updateUser(@PathVariable("id")int id, @RequestBody String name){
+        return new ResponseEntity<>(financeService.updateUser(id, name), HttpStatus.OK);
+    }
 
+    @PutMapping("update/account/{id}")
+    public ResponseEntity<?> updateAccountName(@PathVariable("id")int id, @RequestBody String name){
+        financeService.updateAccountName(id, name);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
+    @DeleteMapping("/delete/{type}")
+    public ResponseEntity<Object> deleteUser(@PathVariable("type")String type, @RequestBody String id) throws InvalidDefinitionException {
+        return new ResponseEntity<>(financeService.deleteRecord(type, id), HttpStatus.OK);
+    }
 }
+

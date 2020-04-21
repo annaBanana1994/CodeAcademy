@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.project.finance.controller.FinanceControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in com.project.finance.controller.FinanceControllerTest
+initializationError(com.project.finance.controller.FinanceControllerTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/hamcrest/SelfDescribing
+Caused by: java.lang.ClassNotFoundException: org.hamcrest.SelfDescribing
+

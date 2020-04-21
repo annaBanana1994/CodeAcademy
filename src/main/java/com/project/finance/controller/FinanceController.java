@@ -1,6 +1,7 @@
 package com.project.finance.controller;
 
 import com.fasterxml.jackson.databind.exc.InvalidDefinitionException;
+import com.project.finance.model.User;
 import com.project.finance.response.ResponseOfUser;
 import com.project.finance.service.FinanceService;
 
@@ -9,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
 
 import java.util.List;
 
@@ -20,7 +22,7 @@ public class FinanceController {
     FinanceService financeService;
 
     @GetMapping("/users")
-    public ResponseEntity<List<?>> searchForAllUsers (){
+    public ResponseEntity<List<User>> searchForAllUsers (){
         return new ResponseEntity<>(financeService.getAllUsers(), HttpStatus.OK);
     }
 
@@ -58,8 +60,11 @@ public class FinanceController {
 
     @PutMapping("update/account/{id}")
     public ResponseEntity<?> updateAccountName(@PathVariable("id")int id, @RequestBody String name){
-        financeService.updateAccountName(id, name);
-        return new ResponseEntity<>(HttpStatus.OK);
+        if(financeService.updateAccountName(id, name)) {
+            return new ResponseEntity<>(HttpStatus.OK);
+        }else {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @DeleteMapping("/delete/{type}")

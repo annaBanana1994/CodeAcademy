@@ -26,8 +26,9 @@ public class FinanceService {
     AccountRepository accountRepository;
 
 
-    public List<?> getAllUsers() {
-        return iterableToList(userRepository.findAll());
+    public List<User> getAllUsers() {
+        List<User> list = (List<User>)iterableToList(userRepository.findAll());
+        return list;
     }
 
     public List<User> getUsersInformationByFirstName(String firstName){
@@ -86,7 +87,7 @@ public class FinanceService {
         return getUsersInformationById(existingUser.getId());
     }
 
-    public void updateAccountName(int id, String name) {
+    public boolean updateAccountName(int id, String name) {
         Account existingAccount = accountRepository.findById(id);
         existingAccount.setAccountName(name);
         System.out.println(existingAccount);
@@ -95,6 +96,7 @@ public class FinanceService {
         int iduser = user.getId();
         ResponseOfUser response = getUsersInformationById(iduser);
       //  return getUsersInformationById(iduser);
+        return true;
     }
 
     public Object deleteRecord(String type, String idString) throws InvalidDefinitionException {

@@ -2,38 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c256cd13-2f7b-4f69-a80c-87ad585b353a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/repository/AccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/response/ResponseOfUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/finance/TestData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/finance/controller/FinanceControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/finance/repository/AccountRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/finance/repository/UserRepositoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/project/finance/service/FinanceServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/43764e7c83db5c4c64dfbf36c9c6178dff5240fc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/3/43764e7c83db5c4c64dfbf36c9c6178dff5240fc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4fc858fdf2b2792f466d1140c376c95847e2456f" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4fc858fdf2b2792f466d1140c376c95847e2456f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/6203502c759745186da6e66efacf14087bee3da0" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/6203502c759745186da6e66efacf14087bee3da0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/c/8cf3e3102828ebbd8c12c1ee358bddeb573f7153" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b9d87969e00a07eb16a04c5355f4474a5d898147" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b9d87969e00a07eb16a04c5355f4474a5d898147" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9f68b1fbcfd655c99eccc6cdbd6a43247c11303e" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9f68b1fbcfd655c99eccc6cdbd6a43247c11303e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b4be5cd2a9de302831454b8da5ab014ef274b58a" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b4be5cd2a9de302831454b8da5ab014ef274b58a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f4e95f30d707076310ae7646ebdbd641235d8974" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/4/f4e95f30d707076310ae7646ebdbd641235d8974" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db-docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/db-docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/controller/FinanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/controller/FinanceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/model/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/model/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/model/AccountType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/model/AccountType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/repository/DatabaseService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/finance/service/FinanceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/finance/service/FinanceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/finance/TestData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/project/finance/TestData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/finance/controller/FinanceControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/project/finance/controller/FinanceControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/finance/repository/AccountRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/finance/repository/UserRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/project/finance/service/FinanceServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/project/finance/service/FinanceServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Finance-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Finance-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Finance.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/finance/controller/FinanceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/finance/controller/FinanceController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/finance/model/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/finance/model/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/finance/model/AccountType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/finance/model/AccountType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/project/finance/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/finance/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/project/finance/service/FinanceService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/finance/service/FinanceService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,23 +91,94 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="FinanceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.project.finance.FinanceApplication" />
+  <component name="RunManager" selected="JUnit.FinanceServiceTest.getUsersInformationById_UserDoesNotExist_WithNoAccounts">
+    <configuration name="FinanceServiceTest.getUsersInformationByFirstName_UserDoesNotExist" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Finance" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.project.finance.*" />
+          <option name="PATTERN" value="com.project.finance.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="com.project.finance.service" />
+      <option name="MAIN_CLASS_NAME" value="com.project.finance.service.FinanceServiceTest" />
+      <option name="METHOD_NAME" value="getUsersInformationByFirstName_UserDoesNotExist" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FinanceServiceTest.getUsersInformationByFirstName_success" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Finance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.finance.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.finance.service" />
+      <option name="MAIN_CLASS_NAME" value="com.project.finance.service.FinanceServiceTest" />
+      <option name="METHOD_NAME" value="getUsersInformationByFirstName_success" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FinanceServiceTest.getUsersInformationById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Finance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.finance.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.finance.service" />
+      <option name="MAIN_CLASS_NAME" value="com.project.finance.service.FinanceServiceTest" />
+      <option name="METHOD_NAME" value="getUsersInformationById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FinanceServiceTest.getUsersInformationById_UserDoesNotExist_WithNoAccounts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Finance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.finance.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.finance.service" />
+      <option name="MAIN_CLASS_NAME" value="com.project.finance.service.FinanceServiceTest" />
+      <option name="METHOD_NAME" value="getUsersInformationById_UserDoesNotExist_WithNoAccounts" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FinanceServiceTest.getUsersInformationById_success_WithNoAccounts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Finance" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.project.finance.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.project.finance.service" />
+      <option name="MAIN_CLASS_NAME" value="com.project.finance.service.FinanceServiceTest" />
+      <option name="METHOD_NAME" value="getUsersInformationById_success_WithNoAccounts" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FinanceApplication" />
+        <item itemvalue="JUnit.FinanceServiceTest.getUsersInformationById_UserDoesNotExist_WithNoAccounts" />
+        <item itemvalue="JUnit.FinanceServiceTest.getUsersInformationById_success_WithNoAccounts" />
+        <item itemvalue="JUnit.FinanceServiceTest.getUsersInformationById" />
+        <item itemvalue="JUnit.FinanceServiceTest.getUsersInformationByFirstName_UserDoesNotExist" />
+        <item itemvalue="JUnit.FinanceServiceTest.getUsersInformationByFirstName_success" />
       </list>
     </recent_temporary>
   </component>
@@ -148,7 +213,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/project/finance/service/FinanceService.java</url>
-          <line>96</line>
+          <line>97</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

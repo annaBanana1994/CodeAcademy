@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: com.project.finance.repository.UserRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in com.project.finance.repository.UserRepositoryTest
+initializationError(com.project.finance.repository.UserRepositoryTest)  Time elapsed: 0 s  <<< ERROR!
+java.lang.NoClassDefFoundError: org/hamcrest/SelfDescribing
+Caused by: java.lang.ClassNotFoundException: org.hamcrest.SelfDescribing
+
